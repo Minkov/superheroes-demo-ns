@@ -1,0 +1,10 @@
+FlexboxLayout {
+    vertical-align: top;
+}
+
+Label {
+    color: white;
+    font-size: 28;
+    background-color: rgba(0, 0, 0, 0.7);
+    text-align: center;
+}
