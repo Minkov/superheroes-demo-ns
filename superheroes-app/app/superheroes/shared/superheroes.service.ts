@@ -7,7 +7,7 @@ import "rxjs/add/operator/map";
 
 import { Superhero } from "./superhero.model";
 
-const url = "http://192.168.202.122:3001/api/superheroes";
+const url = "http://192.168.1.174:3001/api/superheroes";
 
 @Injectable()
 export class SuperheroesService {

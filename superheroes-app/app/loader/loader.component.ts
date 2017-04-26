@@ -1,6 +1,6 @@
 import { Component, ElementRef, Input, ViewChild } from "@angular/core";
 import { View } from "ui/core/view";
-var enums = require("ui/enums");
+
 const animationSpan = 1000;
 
 @Component({
@@ -14,25 +14,22 @@ const animationSpan = 1000;
 export class LoaderComponent {
     public isLoading = true;
 
-    @ViewChild("image") imageRef: ElementRef;
+    @ViewChild("image") public imageRef: ElementRef;
 
     @Input() public set isBusy(value) {
         this.isLoading = value;
+
         // this.startAnimating();
     }
 
-    startAnimating() {
-        let image = <View>this.imageRef.nativeElement;
+    public startAnimating() {
+        const image = <View>this.imageRef.nativeElement;
         this.shrink(image);
     }
 
-    stopAnimating() {
-    }
-
-    shrink(view: View) {
+    public shrink(view: View) {
         view.animate({
             duration: 3000,
-                curve: enums.AnimationCurve.easeIn,
             scale: {
                 x: 0,
                 y: 100,
