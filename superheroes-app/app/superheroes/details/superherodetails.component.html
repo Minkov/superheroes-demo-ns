@@ -1,0 +1,10 @@
+<GridLayout>
+    <FlexboxLayout flexDirection="column">
+        <!-- <Label text="{{superhero.name}}" style="font-size: 38"></Label>-->
+        <Image [src]="imageUrl" width="100" height="100" style="background-color: blue"></Image>
+        <Label text="{{superhero.name}}" style="font-size: 38"></Label>
+
+    </FlexboxLayout>
+
+    <AppLoader [isBusy]="isLoading"></AppLoader>
+</GridLayout>

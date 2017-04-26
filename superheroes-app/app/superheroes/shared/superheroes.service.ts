@@ -7,7 +7,7 @@ import "rxjs/add/operator/map";
 
 import { Superhero } from "./superhero.model";
 
-const url = "http://localhost:3001/api/superheroes";
+const url = "http://192.168.202.122:3001/api/superheroes";
 
 @Injectable()
 export class SuperheroesService {
@@ -19,8 +19,12 @@ export class SuperheroesService {
 
     public getAll(): Observable<Superhero[]> {
         return this.http.get(url)
-            .delay(25000)
             .map((resp) => resp.json() as Superhero[]);
+    }
+
+    public getById(id: string): Observable<Superhero> {
+        return this.http.get(url + "/" + id)
+            .map((resp) => resp.json() as Superhero);
     }
 }
 

@@ -1,7 +1,7 @@
 <GridLayout>
     <ScrollView>
         <FlexboxLayout flexDirection="row" flexWrap="wrap" alignContent="space-between" alignItems="stretch">
-            <GridLayout *ngFor="let superhero of superheroes" height="250" width="125" rows="*, 50">
+            <GridLayout *ngFor="let superhero of superheroes" [nsRouterLink]="['/superheroes', superhero.id]" height="250" width="135" rows="*, 50">
                 <Image stretch="aspectFill" row="0" rowSpan="2" src="{{superhero.imgUrl}}"></Image>
                 <Label row="1" text="{{superhero.name}}"></Label>
             </GridLayout>

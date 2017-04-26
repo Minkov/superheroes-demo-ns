@@ -1,4 +1,6 @@
-import { LoaderComponent } from './loader/loader.component';
+import { SuperheroDetailsComponent } from "./superheroes/details/superherodetails.component";
+import { AppRoutingModule } from "./app.routing";
+import { LoaderComponent } from "./loader/loader.component";
 import { NgModule, NO_ERRORS_SCHEMA } from "@angular/core";
 import { NativeScriptModule } from "nativescript-angular/nativescript.module";
 
@@ -17,8 +19,10 @@ import { NativeScriptHttpModule } from "nativescript-angular";
         AppComponent,
         LoaderComponent,
         SuperheroesComponent,
+        SuperheroDetailsComponent,
     ],
     imports: [
+        AppRoutingModule,
         NativeScriptModule,
         // HttpModule from  "@angular/core"
         NativeScriptHttpModule,
